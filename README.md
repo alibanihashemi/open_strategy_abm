@@ -1,6 +1,6 @@
 # open_strategy_abm
 An agent based model to simulate open strategy
-Online material for the paper "Balancing Consumer and Business Value of Recommender Systems: A Simulation-based Analysis"
+Online material for the paper "Open Strategy"
 
 ## Table of content
 
@@ -28,14 +28,14 @@ Three types of agents are used in the model:
 <ul>
 <li> It proposes strategies in idea generation phase </li>
 <li> It selects a strategy in the second phse </li>
-<li>It implement the selected stratgy</li>
+<li> It implements the selected stratgy</li>
 </ul>
 </li>
 
 <li> Stakeholders: Stakeholders have different roles based on the method of strategy making
 <ul>
-<li> they propose strategies in idea generation phase </li>
-<li>They vote on strategies in strategy selection phase</li>
+<li> They propose strategies in idea generation phase </li>
+<li> They vote on strategies in strategy selection phase</li>
 </ul>
 </li>
 
