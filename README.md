@@ -53,7 +53,6 @@ The following packages are used in our model, see also the file `requirements.tx
 * [matplotlib](https://matplotlib.org/)
 * [pandas](https://pandas.pydata.org/)
 * [scipy](https://www.scipy.org/)
-* [surprise](http://surpriselib.com/)
 * [NKpack](https://pypi.org/project/nkpack/)
 * [multiprocessing](https://docs.python.org/3/library/multiprocessing.html)
 * [seaborn](https://seaborn.pydata.org/)
