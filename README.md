@@ -94,111 +94,42 @@ To run the simulation when Docker does not exist:
 cd src
 ```
 
-```python run.py```
-
-When using Docker:
-Since the simulation saves data to the disk at the end, an output directory has to be provided to the Docker image. The following command runs a new container of the simulation and saves the output in the "results" directory. Before running the Docker container, create a directory named `results` on the host machine by executing the following commands: 
-
-```
-git clone <git_repo>
-```
-
-```
-cd simulation
-```
-
-```
-mkdir results
-```
-
-Run the Docker container.
-
-```
-docker run -dit --rm -v ${PWD}/results:/results --name <my_container> <nadadocker/simulation>
-```
-
-* `container_name`: A name of the container
-* `${PWD}`: The current working directory
-* `-v ${PWD}/results:/results`: Sets up a bind mount volume that links the `/results` directory from inside the 'container_name' to the  directory ${PWD}/results on the host machine. Docker uses  ':' to split the host’s path from the container path, and the host path always comes first
-* `<nadadocker/simulation>` : The Docker image that is used to run the container
+```python setup.py```
 
 
 ## File structure
 The simulation is built with the help of [Mesa](https://github.com/projectmesa/mesa), an agent-based simulation framework in Python.
 ```
 ├── data/
-│   ├── dataset                 <- MovieLens dataset 
-│   │   ├── movies.csv
-│   │   └── ratings.csv
-│   ├── recdata/                  <- Recommendation algorithm output saved in  pickle format
-│   │   ├── consumers_items_utilities_predictions.p
-│   │   ├── consumers_items_utilities_predictions_popular.p
-│   │   └── SVDmodel.p
-│   └── trust/                    <- Initial data for consumer trust 
-│       └── beta_initials.p
+
 ├── Dockerfile
 ├── figures/                      <- Figures that show simulation results
 │   ├── modelgeneralflow.png
-│   ├── time-consumption_probability.png
-│   ├── time-total_profit.png
-│   └── time-trust.png
+│   ├── modeldescription.png
+
 ├── README.md
 ├── requirements.txt
-├── results-analysis(R)/                      <- R code to analyze model output, the output is stored in "results" folder, we store it in a seafile service
 ├── src/
   ├── __init__.py
-  ├── config.yml                  <- Simulation settings
-  ├── consumer.py                 <- Contains all propoerties and behaviors of consumer agents 
-  ├── mesa_utils/
-  │   ├── __init__.py
-  │   ├── datacollection.py
-  │   └── schedule.py
-  ├── model.py                    <- Contains the model class, which manages agent creation, data sharing, and simulation output collection 
-  ├── plots.py                    <- Plotting module for data analysis
-  ├── read_config.py
-  ├── run.py                      <- Launches the simulation
-  ├── service_provider.py         <- Contains all properties and behavior of the service provider agent
-  ├── test.py
-  └── utils.py             <- An auxiliary module 
-
+  ├── simulations.xlsx                  <- Simulation settings
+  ├── switch.py                 <- Contains all classes and methods
+  ├── setup.py                      <- Launches the simulation
+  ├── simulation.txt         <- How to run the simulation
 ```
-## Ratings dataset
-We use the [MovieLens dataset](https://grouplens.org/datasets/movielens/), the small version (1 MB), which contains movie ratings for multiple consumers, [more details](http://files.grouplens.org/datasets/movielens/ml-latest-small-README.html). The following shows the content of `ratings.csv`.
 
-
-|userId|movieId|rating|timestamp|
-|------|-------|------|---------|
-|1|	1|4|964982703|
-|1|3|4|964981247|
-|1|6|4|964982224|
-|1|47|5|964983815|
-|1|50|5|964982931|
-
-The dataset is used to predict consumer items utilities, and to initialize the model.
 
 ## Configuration file
-`config.yml` includes all the required parameters to set up the model.
+`simulations.xlsx` includes all the required parameters to set up the model.
 
 
-**Note**: Running the code may take a long time (e.g. one hour) based on the predefined time steps and the number of replications in the configuration. 
+**Note**: Running the code may take a long time (e.g. one day to one week) based on the predefined time steps and the number of participants and etc in the configuration. 
 
 
 ## Results
-Each execution of the model generates a unique folder inside the results folder. The collected data from the simulation contains various CSV files, a summary of the simulated strategies in a file named scenarios.json, and plots in the PNG format.
+Each execution of the model generates a unique folder inside the results folder. The collected data from the simulation contains various CSV files, a summary of the simulated strategies in a file named scenarios.csv, and plots in the PNG and pdf format.
 
 
-The following is part of the results generated from running the simulation for 1000 time steps and 3 replications. The simulation comprises one service provider and 610 consumers, and consumers can share their experiences on social media.
+The following is part of the results generated from running the simulation for ...
 
 
-<table>
-  <tr>
-    <td>Consumption probability</td>
-     <td>Profit per step</td>
-     <td>Cumulative profit</td>
-  </tr>
-  <tr>
-    <td><img src="figures/consumption.png" width=300 height=200></td>
-    <td><img src="figures/profit-per-step.png" width=300 height=200></td>
-    <td><img src="figures/cumulative-profit.png" width=300 height=200></td>
-  </tr>
- </table>
+
