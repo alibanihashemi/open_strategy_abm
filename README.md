@@ -42,7 +42,7 @@ Three types of agents are used in the model:
 <li>Environment: This agent represents the environmental changes and acts random </li>
 </ul>
 
-## General model workflow based on [Experience goods](https://link.springer.com/chapter/10.1007/978-3-8350-9580-9_1)
+## General model workflow based on [Startegy as a practice ](https://link.springer.com/chapter/10.1007/978-3-8350-9580-9_1)
 ![model_workflow](figures/modelgeneralflow.png)
 
 ## Requirements
