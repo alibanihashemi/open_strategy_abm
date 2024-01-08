@@ -26,7 +26,7 @@ Agent Types:
 - **Environment**: Represents environmental changes, acting randomly.
 
 ## Model Workflow
-[Strategy as a Practice](https://github.com/alibanihashemi/open_strategy_abm/issues/1#issue-2069867436](https://github.com/alibanihashemi/open_strategy_abm/issues/1#issuecomment-1880536219) 
+[Strategy as a Practice](https://github.com/alibanihashemi/open_strategy_abm/issues/2#issue-2069931794) 
 
 ## Requirements
 Test Environment: Windows 10, Python 3.8, 16GB RAM, Intel Core i7 CPU. Install the latest version of Anaconda for Python 3 and scientific package support.
