@@ -1,1 +1,6 @@
-
+# How to run
+<ol>
+<li> setup the values for the simulation </li>
+<li> simulations, switch ,and setup should be in a same folder  </li>
+<li> Results will be saved on desktop</li>
+</ol>
