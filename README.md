@@ -49,7 +49,6 @@ Detailed in `requirements.txt`.
 2. Create a virtual environment: `conda create -n myenv python=3.8`.
 3. Activate the virtual environment: `conda activate myenv`.
 4. Install packages: `pip install -r requirements.txt`.
-5. For **surprise** package issues on Windows: `conda install -c conda-forge scikit-surprise`.
 
 ### With Docker
 Pull the Docker image: `docker pull nadadocker/simulation`.
