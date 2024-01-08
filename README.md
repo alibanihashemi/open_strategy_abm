@@ -50,8 +50,6 @@ Detailed in `requirements.txt`.
 3. Activate the virtual environment: `conda activate myenv`.
 4. Install packages: `pip install -r requirements.txt`.
 
-### With Docker
-Pull the Docker image: `docker pull nadadocker/simulation`.
 
 ## Running the Model
 For non-Docker setups:
@@ -59,18 +57,12 @@ For non-Docker setups:
 Navigate to the source directory: `cd src`.
 Execute `python setup.py`.
 
-## File Structure
-Built using [Mesa](https://github.com/projectmesa/mesa), a Python agent-based simulation framework.
-
-
-
 
 ## File structure
 The simulation is built with the help of [Mesa](https://github.com/projectmesa/mesa), an agent-based simulation framework in Python.
 ```
 ├── data/
 
-├── Dockerfile
 ├── figures/                      <- Figures that show simulation results
 │   ├── modelgeneralflow.png
 │   ├── modeldescription.png
@@ -78,7 +70,6 @@ The simulation is built with the help of [Mesa](https://github.com/projectmesa/m
 ├── README.md
 ├── requirements.txt
 ├── src/
-  ├── __init__.py
   ├── simulations.xlsx                  <- Simulation settings
   ├── switch.py                 <- Contains all classes and methods
   ├── setup.py                      <- Launches the simulation
