@@ -45,8 +45,7 @@ Three types of agents are used in the model:
 ## General model workflow based on [Startegy as a practice ](https://github.com/alibanihashemi/open_strategy_abm/issues/1#issue-2069867436)
 
 ## Requirements
-We tested the code on a machine with MS Windows 10, Python=3.8, 16GB, and an Intel Core 7 CPU.  The code also was tested using a machine with Docker, Ubuntu 20.04.2 LTS x86_64, , 30GB, and an Intel Xeon E5645 (12) @ 2.4. processor. \
-For installation without Docker, it is recommended to install the last version of Anaconda, which comes with Python 3 and supports scientific packages.
+We tested the code on a machine with MS Windows 10, Python=3.8, 16GB, and an Intel Core 7 CPU.  Install the last version of Anaconda, which comes with Python 3 and supports scientific packages.
 
 The following packages are used in our model, see also the file `requirements.txt`:
 * [numpy](https://numpy.org/)
