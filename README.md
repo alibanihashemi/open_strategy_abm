@@ -1,100 +1,69 @@
 # open_strategy_abm
-An agent based model to simulate open strategy
-Online material for the paper "Open Strategy"
+An agent-based model to simulate open strategy dynamics, accompanying the paper "Open Strategy".
 
-## Table of content
+## Table of Contents
 
 - [Summary](#summary)
-- [General model workflow](#general-model-workflow)
+- [Model Workflow](#model-workflow)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Running the model](#running-the-model)
-- [File structure](#file-structure)
-- [Rating dataset](#ratings-dataset)
-- [Configuration file](#configuration-file)
+- [Running the Model](#running-the-model)
+- [File Structure](#file-structure)
+- [Configuration File](#configuration-file)
 - [Results](#results)
-
-
+- [Citation](#citation)
 
 ## Summary
-This agent-based simulation model demonstrates the consequences of various methods of stratgy making. An organization can open up its strategy in different levels to stakeholders. There are three phases of strategy making: 1-Idea generation 2-strategy selection 3-Implementation. Organization can keep the process of strategy making closed or include stakeholders in one or two first phases of strategy making.
-When first phase of strategy making is opened the performance of strategy is the best however there might be diengagement of stakeholders or even lose of performance through time.
-When the idea generation phase and strategy selection phase are both open the performance can be better or worse as compared to close strategy making. Nevertheless stakeholders are better engaged in the process of strategy making.
+This agent-based simulation model explores the impacts of various open strategy-making processes. It demonstrates how an organization can involve stakeholders in different phases of strategy-making: 1) Idea Generation, 2) Strategy Selection, and 3) Implementation. The model evaluates the effects of these participatory approaches on strategy performance and stakeholder engagement.
 
-Three types of agents are used in the model: 
+Key Findings:
+- Opening the Idea Generation phase typically leads to superior strategy performance but might result in stakeholder disengagement or performance decline over time.
+- Involving stakeholders in both Idea Generation and Strategy Selection can yield varied outcomes, enhancing or diminishing performance compared to closed strategies.
 
-<ul>
-<li> The organization: The organization has deferent roles depend on the strategy making method
-<ul>
-<li> It proposes strategies in idea generation phase </li>
-<li> It selects a strategy in the second phse </li>
-<li> It implements the selected stratgy</li>
-</ul>
-</li>
+Agent Types:
+- **The Organization**: Assumes different roles based on the strategy-making method.
+- **Stakeholders**: Their roles vary according to the strategy-making approach.
+- **Environment**: Represents environmental changes, acting randomly.
 
-<li> Stakeholders: Stakeholders have different roles based on the method of strategy making
-<ul>
-<li> They propose strategies in idea generation phase </li>
-<li> They vote on strategies in strategy selection phase</li>
-</ul>
-</li>
-
-<li>Environment: This agent represents the environmental changes and acts random </li>
-</ul>
-
-## General model workflow based on [Startegy as a practice ](https://github.com/alibanihashemi/open_strategy_abm/issues/1#issue-2069867436)
+## Model Workflow
+[Strategy as a Practice](https://github.com/alibanihashemi/open_strategy_abm/issues/1#issue-2069867436) outlines the general workflow of the model.
 
 ## Requirements
-We tested the code on a machine with MS Windows 10, Python=3.8, 16GB, and an Intel Core 7 CPU.  Install the last version of Anaconda, which comes with Python 3 and supports scientific packages.
+Test Environment: Windows 10, Python 3.8, 16GB RAM, Intel Core i7 CPU. Install the latest version of Anaconda for Python 3 and scientific package support.
 
-The following packages are used in our model, see also the file `requirements.txt`:
-* [numpy](https://numpy.org/)
-* [matplotlib](https://matplotlib.org/)
-* [pandas](https://pandas.pydata.org/)
-* [scipy](https://www.scipy.org/)
-* [NKpack](https://pypi.org/project/nkpack/)
-* [multiprocessing](https://docs.python.org/3/library/multiprocessing.html)
-* [seaborn](https://seaborn.pydata.org/)
+Required Packages:
+- numpy
+- matplotlib
+- pandas
+- scipy
+- NKpack
+- multiprocessing
+- seaborn
+
+Detailed in `requirements.txt`.
 
 ## Installation
 
-### Setting up the environment (No Docker)
-Download and install [Anaconda](https://www.anaconda.com/products/individual-d) (Individual Edition)
+### Without Docker
+1. Download and install [Anaconda (Individual Edition)](https://www.anaconda.com/products/individual-d).
+2. Create a virtual environment: `conda create -n myenv python=3.8`.
+3. Activate the virtual environment: `conda activate myenv`.
+4. Install packages: `pip install -r requirements.txt`.
+5. For **surprise** package issues on Windows: `conda install -c conda-forge scikit-surprise`.
 
-Create a virtual environment
-```
-conda create -n myenv python=3.8
-```
-Activate the virtual environment 
-```
-conda activate myenv
-```
-More commands regarding the use of virtual environments in Anaconda can be found [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) 
+### With Docker
+Pull the Docker image: `docker pull nadadocker/simulation`.
 
-Install the required packages by running: 
-```
-pip install -r requirements.txt
-```
+## Running the Model
+For non-Docker setups:
 
-If you face errors when insatlling the **surprise** package on MS Windows, run:
-```
-conda install -c conda-forge scikit-surprise
-```
-### Setting up the environment (Using Docker)
-We provide a Docker image on Docker hub; to pull the image use the following:
+Navigate to the source directory: `cd src`.
+Execute `python setup.py`.
 
-```
-docker pull nadadocker/simulation
-```
+## File Structure
+Built using [Mesa](https://github.com/projectmesa/mesa), a Python agent-based simulation framework.
 
-## Running the model
-To run the simulation when Docker does not exist: 
 
-```
-cd src
-```
-
-```python setup.py```
 
 
 ## File structure
