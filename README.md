@@ -54,8 +54,9 @@ The following packages are used in our model, see also the file `requirements.tx
 * [pandas](https://pandas.pydata.org/)
 * [scipy](https://www.scipy.org/)
 * [surprise](http://surpriselib.com/)
-* [mesa](https://mesa.readthedocs.io/en/master/tutorials/intro_tutorial.html)
-* [pyyaml](https://pyyaml.org/)
+* [NKpack](https://pypi.org/project/nkpack/)
+* [multiprocessing](https://docs.python.org/3/library/multiprocessing.html)
+* [seaborn](https://seaborn.pydata.org/)
 
 ## Installation
 
